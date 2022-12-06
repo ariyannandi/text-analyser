@@ -53,28 +53,28 @@ export default function TextForm(props) {
           ></textarea>
         </div>
         <button
-          disabled={text.length == ""}
+          disabled={text.length === ""}
           className={`btn btn-${btnStyle} mx-1 my-1`}
           onClick={handleUpClick}
         >
           Convert to Uppercase
         </button>
         <button
-          disabled={text.length == ""}
+          disabled={text.length === ""}
           className={`btn btn-${btnStyle} mx-1 my-1`}
           onClick={handleLowClick}
         >
           Covert to Lowercase
         </button>
         <button
-          disabled={text.length == ""}
+          disabled={text.length === ""}
           className={`btn btn-${btnStyle} mx-1 my-1`}
           onClick={handleCopyClick}
         >
           Copy to Clipboard
         </button>
         <button
-          disabled={text.length == ""}
+          disabled={text.length === ""}
           className={`btn btn-${btnStyle} mx-1 my-1`}
           onClick={handleClearClick}
         >
