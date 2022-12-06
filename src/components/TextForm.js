@@ -27,6 +27,8 @@ export default function TextForm(props) {
   const handleOnChange = (event) => {
     setText(event.target.value);
   };
+
+  const btnStyle = props.mode === "light" ? "dark" : "light";
   return (
     <>
       <div
@@ -51,33 +53,29 @@ export default function TextForm(props) {
           ></textarea>
         </div>
         <button
-          className={`btn btn-${
-            props.mode === "light" ? "dark" : "light"
-          } mx-1 my-1`}
+          disabled={text.length == ""}
+          className={`btn btn-${btnStyle} mx-1 my-1`}
           onClick={handleUpClick}
         >
           Convert to Uppercase
         </button>
         <button
-          className={`btn btn-${
-            props.mode === "light" ? "dark" : "light"
-          } mx-1 my-1`}
+          disabled={text.length == ""}
+          className={`btn btn-${btnStyle} mx-1 my-1`}
           onClick={handleLowClick}
         >
           Covert to Lowercase
         </button>
         <button
-          className={`btn btn-${
-            props.mode === "light" ? "dark" : "light"
-          } mx-1 my-1`}
+          disabled={text.length == ""}
+          className={`btn btn-${btnStyle} mx-1 my-1`}
           onClick={handleCopyClick}
         >
           Copy to Clipboard
         </button>
         <button
-          className={`btn btn-${
-            props.mode === "light" ? "dark" : "light"
-          } mx-1 my-1`}
+          disabled={text.length == ""}
+          className={`btn btn-${btnStyle} mx-1 my-1`}
           onClick={handleClearClick}
         >
           Clear
@@ -99,11 +97,7 @@ export default function TextForm(props) {
           mintutes to read.
         </p>
         <h3>Preview</h3>
-        <p>
-          {text.length > 0
-            ? text
-            : "Enter your text above to preview it here.."}
-        </p>
+        <p>{text.length > "" ? text : "Nothing preview.."}</p>
       </div>
     </>
   );
