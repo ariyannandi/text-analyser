@@ -53,13 +53,15 @@ export default function TextForm(props) {
         <button
           className={`btn btn-${
             props.mode === "light" ? "dark" : "light"
-          } mx-3`}
+          } mx-1 my-1`}
           onClick={handleUpClick}
         >
           Convert to Uppercase
         </button>
         <button
-          className={`btn btn-${props.mode === "light" ? "dark" : "light"}`}
+          className={`btn btn-${
+            props.mode === "light" ? "dark" : "light"
+          } mx-1 my-1`}
           onClick={handleLowClick}
         >
           Covert to Lowercase
@@ -67,13 +69,15 @@ export default function TextForm(props) {
         <button
           className={`btn btn-${
             props.mode === "light" ? "dark" : "light"
-          } mx-3`}
+          } mx-1 my-1`}
           onClick={handleCopyClick}
         >
           Copy to Clipboard
         </button>
         <button
-          className={`btn btn-${props.mode === "light" ? "dark" : "light"}`}
+          className={`btn btn-${
+            props.mode === "light" ? "dark" : "light"
+          } mx-1 my-1`}
           onClick={handleClearClick}
         >
           Clear
