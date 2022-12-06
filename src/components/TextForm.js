@@ -53,28 +53,28 @@ export default function TextForm(props) {
           ></textarea>
         </div>
         <button
-          disabled={text.length === ""}
+          disabled={text.length === 0}
           className={`btn btn-${btnStyle} mx-1 my-1`}
           onClick={handleUpClick}
         >
           Convert to Uppercase
         </button>
         <button
-          disabled={text.length === ""}
+          disabled={text.length === 0}
           className={`btn btn-${btnStyle} mx-1 my-1`}
           onClick={handleLowClick}
         >
           Covert to Lowercase
         </button>
         <button
-          disabled={text.length === ""}
+          disabled={text.length === 0}
           className={`btn btn-${btnStyle} mx-1 my-1`}
           onClick={handleCopyClick}
         >
           Copy to Clipboard
         </button>
         <button
-          disabled={text.length === ""}
+          disabled={text.length === 0}
           className={`btn btn-${btnStyle} mx-1 my-1`}
           onClick={handleClearClick}
         >
@@ -97,7 +97,7 @@ export default function TextForm(props) {
           mintutes to read.
         </p>
         <h3>Preview</h3>
-        <p>{text.length > "" ? text : "Nothing preview.."}</p>
+        <p>{text !== "" ? text : "Nothing preview.."}</p>
       </div>
     </>
   );
