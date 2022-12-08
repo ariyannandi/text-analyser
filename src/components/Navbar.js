@@ -25,7 +25,7 @@ export default function Navbar(props) {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link className="nav-link active" to="/">
+              <Link className="nav-link " to="/">
                 Home
               </Link>
             </li>
@@ -35,7 +35,7 @@ export default function Navbar(props) {
               </Link>
             </li>
           </ul>
-          <div className="d-flex">
+          {/* <div className="d-flex">
             <div
               className="bg-primary rounded mx-2 my-1"
               onClick={() => {
@@ -104,7 +104,7 @@ export default function Navbar(props) {
                 border: "1px solid",
               }}
             ></div>
-          </div>
+          </div> */}
           <div
             className={`form-check form-switch text-${
               props.mode === "light" ? "dark" : "light"

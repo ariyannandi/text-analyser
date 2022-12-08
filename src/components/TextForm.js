@@ -6,22 +6,22 @@ export default function TextForm(props) {
   const handleUpClick = () => {
     let newText = text.toUpperCase();
     setText(newText);
-    props.showAlert("Your text has been converted to uppercase", "success");
+    props.showAlert("Your text has been converted to uppercase.", "success");
   };
   const handleLowClick = () => {
     let newText = text.toLowerCase();
     setText(newText);
-    props.showAlert("Your text has been converted to lowercase", "success");
+    props.showAlert("Your text has been converted to lowercase.", "success");
   };
   const handleCopyClick = () => {
     navigator.clipboard.writeText(text);
-    props.showAlert("Your text has been copied", "success");
+    props.showAlert("Your text has been copied.", "success");
   };
 
   const handleClearClick = () => {
     let newText = "";
     setText(newText);
-    props.showAlert("Your text has been cleared", "success");
+    props.showAlert("Your text has been cleared.", "success");
   };
 
   const handleOnChange = (event) => {
@@ -89,11 +89,11 @@ export default function TextForm(props) {
       >
         <h1>Text Summary</h1>
         <p>
-          {text.split(" ").filter((word) => word !== "").length} words and{" "}
+          {text.split(/\s+/).filter((word) => word !== "").length} words and{" "}
           {text.trim().length} chartacters.
         </p>
         <p>
-          {0.008 * text.split(" ").filter((word) => word !== "").length}{" "}
+          {0.008 * text.split(/\s+/).filter((word) => word !== "").length}{" "}
           mintutes to read.
         </p>
         <h3>Preview</h3>
